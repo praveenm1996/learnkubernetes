@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: php-app-adminer
+  labels:
+    app: php-app-adminer
+spec:
+  containers:
+    - name: php-app-adminer
+      image: adminer:latest

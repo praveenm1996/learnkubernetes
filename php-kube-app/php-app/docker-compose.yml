@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context:  .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www/html
+
+  db:
+    build:
+      context:  .
+      dockerfile: DB/Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    command: --default-authentication-plugin=mysql_native_password 
+    restart: always
+    
+     
+      
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

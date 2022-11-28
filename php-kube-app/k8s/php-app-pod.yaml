@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: php-app-pod
+  labels:
+    app: php-app
+spec:
+  containers:
+    - name: php-app
+      imagePullPolicy: IfNotPresent
+      image: php-app:latest

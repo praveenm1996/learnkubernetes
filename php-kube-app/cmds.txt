@@ -1,0 +1,35 @@
+kubectl apply -f .\php-adminer-pod.yaml
+kubectl apply -f .\php-adminer-pod.yaml
+kubectl apply -f .\php-adminer-pod.yaml
+kubectl apply -f .\php-adminer-pod.yaml
+kubectl apply -f .\php-adminer-pod.yaml
+kubectl apply -f .\php-adminer-pod.yaml
+kubectl apply -f .\php-app-pod.yaml
+kubectl apply -f .\php-db-pod.yaml
+kubectl ps
+kubectl get pods
+kubectl apply -f .\php-adminer-pod.yaml
+kubectl get pods
+kubectl apply -f .\php-db-pod.yaml
+kubectl
+kubectl get pods
+kubectl delete php-app-pod
+kubectl get pods
+kubectl describe php-app-pod
+kubectl delete 297c7154926898b44162a27571a7303d777dfcfdc497aa10a2a7a0d293ff5abe
+kubectl delete k8s_POD_php-app-pod_default_ff61dd99-e48f-473c-9f9f-8d04e4094df0_0
+kubectl delete pod php-app-pod
+kubectl delete pod php-db-pod
+kubectl apply -f .\php-db-pod.yaml
+kubectl get pods
+kubectl delete pod php-db-pod
+kubectl get pods
+kubectl apply -f .\php-db-pod.yaml
+kubectl describe pod php-db-pod
+docker image remove php-app_app
+docker image remove php-app_db
+kubectl delete pod php-db-pod
+docker image remove php-app_db
+docker build --tag php-app:latest .
+docker build --tag php-db:latest . 
+kubectl port-forward php-app-adminer 8080:8080

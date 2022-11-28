@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-php
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-php
+  template:
+    metadata:
+      name: app-php
+      labels:
+        app: app-php
+    spec:
+      containers:
+        - name: app-php
+          imagePullPolicy: IfNotPresent
+          image: php-app:latest
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-php-srv
+spec:
+  type: NodePort
+  selector:
+    app: app-php
+  ports:
+    - port: 80
+      nodePort: 30009

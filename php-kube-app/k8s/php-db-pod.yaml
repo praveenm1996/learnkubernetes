@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: php-db-pod
+  labels:
+    app: php-db
+spec:
+  containers:
+    - name: php-db
+      image: php-db:latest
+      imagePullPolicy: IfNotPresent
