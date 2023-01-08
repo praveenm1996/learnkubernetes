@@ -33,3 +33,92 @@ docker image remove php-app_db
 docker build --tag php-app:latest .
 docker build --tag php-db:latest . 
 kubectl port-forward php-app-adminer 8080:8080
+
+
+#############
+
+
+ cd .\php-kube-app\k8s\
+   2 ls
+   3 kubectl apply -f .\php-app-deployment.yaml
+   4 kubectl apply -f .\php-adminer-deployment.yaml
+   5 kubectl apply -f .\php-db-deployment.yaml
+   6 kubectl get pods
+   7 kubectl delete pod app-aapp-adminer-59fbfdccdf-m9jq9
+   8 kubectl delete pod app--adminer-59fbfdccdf-m9jq9
+   9 kubectl delete pod app-adminer-59fbfdccdf-m9jq9
+  10 kubectl delete pod app-adminer-59fbfdccdf-m9jqapp-adminer-59fbfdccdf-pffcr
+  11 kubectl delete pod app-adminer-59fbfdccdf-pffcr
+  12 kubectl delete pod app-php-75594794cc-jbvnx
+  13 kubectl delete pod db-778c6dd6b6-j4vq8
+  14 kubectl get deploy
+  15 kubectl delete deploy app-adminer
+  16 kubectl delete deploy app-php
+  17 kubectl delete deploy db
+  18 cd ..
+  19 cd .\php-app\
+  20 kls
+  21 ls
+  22 docker compose up -d
+  23 docker compose up -d
+  24 cd ..
+  25 cd .\k8s\
+  26 ls
+  27 kubectl apply -f .\php-app-deployment.yaml
+  28 kubectl apply -f .\php-db-deployment.yaml
+  29 kubectl apply -f .\php-adminer-deployment.yaml
+  30 kubectl get pods
+  31 kubectl get pods
+  32 kubectl get deploy
+  33 kubectl get pods
+  34 kubectl delete deploy db
+  35 kubectl delete deploy app-php
+  36 kubectl delete deploy app-adminer
+  37 kubectl apply -f .\php-app-deployment.yaml
+  38 kubectl apply -f .\php-app-deployment.yaml
+  39 kubectl apply -f .\php-app-deployment.yaml
+  40 kubectl get pods
+  41 docker images
+  42 kubectl apply -f .\php-adminer-deployment.yaml
+  43 kubectl get pods
+  44 kubectl get deploy
+  45 kubectl delete deploy app-adminer
+  46 kubectl delete deploy app-php
+  47 cd ..
+  48 ls
+  49 cd .\php-app\
+  50 ls
+  51 docker compose up -d
+  52 cd ..
+  53 cd .\k8s\
+  54 ls
+  55 kubectl apply -f .\php-app-deployment.yaml
+  56 kubectl get pods
+  57 kubectl describe pod php-db-pod
+  58 kubectl describe pod app-php-75594794cc-fwgpr
+  59 kubectl get pods
+  60 kubectl delete app-php-75594794cc-fwgpr
+  61 kubectl describe pod app-php-75594794cc-fwgpr
+  62 kubectl delete pod app-php-75594794cc-fwgpr
+  63 kubectl get deploy
+  64 kubectl delete app-php
+  65 kubectl deploy delete app-php
+  66 kubectl delete deploy  app-php
+  67 kubectl get deploy
+  68 kubectl get deploy
+  69 cd ..
+  70 ls
+  71 cd .\php-app\
+  72 ls
+  73 docker build . -t php-app
+  74 cd ..
+  75 ls
+  76 cd .\k8s\
+  77 kubectl apply -f .\php-app-deployment.yaml
+  78 kubectl get pods
+  79 kubectl get deploy
+  80 kubectl apply -f .\php-db-deployment.yaml
+  81 kubectl get pods
+  82 kubectl delete deploy app-php
+  83 kubectl get deploy
+  84 kubectl delete deploy db
