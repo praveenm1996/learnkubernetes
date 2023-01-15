@@ -17,18 +17,41 @@ Added another folder php-app\page2 and files Dockerfile and index.php  and creat
 Run kubectl apply for all four deploy file 
 check multi front end pod with different NodePort app 30009,30012 first page , second page.
 
-PS E:\Devops\Docker\learnkubernetes\php-kube-app\k8s> kubectl apply -f .\php-db-deployment.yaml
-deployment.apps/db created
-service/db created
-PS E:\Devops\Docker\learnkubernetes\php-kube-app\k8s> kubectl apply -f .\php-app-deployment.yaml
-deployment.apps/app-php created
-service/app-php-srv created
-PS E:\Devops\Docker\learnkubernetes\php-kube-app\k8s> kubectl apply -f .\php-app2-deployment.yaml
-deployment.apps/app1-php created
-service/app1-php-srv created
-PS E:\Devops\Docker\learnkubernetes\php-kube-app\k8s> kubectl apply -f .\php-adminer-deployment.yaml
-deployment.apps/app-adminer created
-service/app-adminer-srv created
-
 CHECK http://localhost:30009/ ,http://localhost:30012/  Success
+
+TODO Ingress deploy 
+Learn Ingress:
+Follow : https://devopscube.com/kubernetes-ingress-tutorial/
+need to install all prerequisite for ingress
+Follow : https://devopscube.com/setup-ingress-kubernetes-nginx-controller/
+
+------
+install all prerequisite buy download the repo and open in new VS code kubectl apply  all the  file in the folder manifests
+IN windows rename hostname 
+
+open cmd in admin rights 
+
+C:\Windows\system32>cd drivers
+
+C:\Windows\System32\drivers>cd etc
+
+C:\Windows\System32\drivers\etc>notepad hosts
+
+Add the line in the file
+127.0.0.1  praveensite.com
+
+create ingress-srv.yaml file 
+
+convert the Nodeport to ClusterIP in the app and app2 deploy file .
+
+Run the deploy file 
+
+http://praveensite.com/app1   => app
+http://praveensite.com/app2   => app2
+
+ Usefull link : https://stackoverflow.com/questions/65703968/kubernetes-ingress-nginx-use-regex-to-match-exact-url-path
+                https://stackoverflow.com/questions/52021925/kubernetes-ingress-non-root-path-404-not-found
+                https://kubernetes.io/docs/concepts/services-networking/ingress/
+                https://kubernetes.github.io/ingress-nginx/examples/rewrite/
+
 

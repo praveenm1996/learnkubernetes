@@ -122,3 +122,62 @@ kubectl port-forward php-app-adminer 8080:8080
   82 kubectl delete deploy app-php
   83 kubectl get deploy
   84 kubectl delete deploy db
+
+  15-Jan
+   1 kubectl get pods
+   2 kubectl get service
+   3 kubectl delete all --all
+   4 cd .\php-kube-app\k8s\
+   5 ls
+   6 kubectl apply -f .\php-adminer-deployment.yaml
+   7 kubectl apply -f .\php-app-deployment.yaml
+   8 kubectl apply -f .\php-app-deployment.yaml
+   9 kubectl apply -f .\php-app2-deployment.yaml
+  10 kubectl apply -f .\php-db-deployment.yaml
+  11 kubectl apply -f .\ingress-srv.yaml
+  12 kubectl apply -f .\ingress-srv.yaml
+  13 kubectl describe ingress
+  14 kubectl get pods
+  15 kubectl get deploy
+  16 kubectl get ingress
+  17 kubectl delete ingress myingress
+  18 kubectl apply -f .\ingress-srv.yaml
+  19 kubectl get ingress
+  20 kubectl delete ingress myingress
+  21 kubectl get service
+  22 kubectl apply -f .\ingress-srv.yaml
+  23 kubectl get ingress
+  24 kubectl describe ingress
+  25 kubectl delete ingress myingress
+  26 kubectl apply -f .\ingress-srv.yaml
+  27 kubectl delete ingress myingress
+  28 kubectl apply -f .\ingress-srv.yaml
+  29 kubectl describe ingress
+  30 kubectl delete ingress myingress
+  31 kubectl apply -f .\ingress-srv.yaml
+  32 kubectl delete ingress myingress
+  33 kubectl apply -f .\ingress-srv.yaml
+  34 kubectl describe ingress
+  35 kubectl get service
+  36 kubectl delete ingress myingress
+  37 kubectl apply -f .\ingress-srv.yaml
+  38 kubectl describe ingress
+  39 kubectl delete ingress myingress
+  40 kubectl apply -f .\ingress-srv.yaml
+  41 kubectl get service
+  42 kubectl delete ingress myingress
+  43 kubectl delete all -all
+  44 kubectl delete all --all
+  45 kubectl apply -f .\php-db-deployment.yaml
+  46 kubectl apply -f .\php-app-deployment.yaml
+  47 kubectl apply -f .\php-app2-deployment.yaml
+  48 kubectl apply -f .\php-adminer-deployment.yaml
+  49 kubectl delete all --all
+  50 kubectl apply -f .\php-adminer-deployment.yaml
+  51 kubectl apply -f .\php-app2-deployment.yaml
+  52 kubectl apply -f .\php-app-deployment.yaml
+  53 kubectl apply -f .\php-db-deployment.yaml
+  54 kubectl apply -f .\ingress-srv.yaml
+  55 kubectl delete ingress myingress
+  56 kubectl apply -f .\ingress-srv.yaml
+  57 kubectl describe ingress

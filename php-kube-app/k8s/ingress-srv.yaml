@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  labels:
+    name: myingress
+spec:
+  rules:
+  - host: praveensite.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /app1
+        backend:
+          service:
+            name: app-php-srv
+            port: 
+              number: 80
+      - pathType: Prefix
+        path: /app2
+        backend:
+          service:
+            name: app1-php-srv
+            port:
+              number: 80
+
