@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-php
+  name: app1-php
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app-php
+      app: app1-php
   template:
     metadata:
-      name: app-php
+      name: app1-php
       labels:
-        app: app-php
+        app: app1-php
     spec:
       containers:
-        - name: app-php
+        - name: app1-php
           imagePullPolicy: IfNotPresent
-          image: php-app:latest
+          image: php-app1
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: app-php-srv
+  name: app1-php-srv
 spec:
   type: NodePort
   selector:
-    app: app-php
+    app: app1-php
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30009
+      nodePort: 30012
