@@ -74,6 +74,11 @@ Resource in k8s
 used the type 3 in the app1 deployment 
 
 
+NExt time :
+ 1. start the nginx using the kubectl apply -f deployment.yaml -n ingress-nginx in other repo
+ 2. then run the k8s files using apply
+
+
 
 
 
