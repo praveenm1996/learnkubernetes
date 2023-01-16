@@ -55,3 +55,26 @@ http://praveensite.com/app2   => app2
                 https://kubernetes.github.io/ingress-nginx/examples/rewrite/
 
 
+16-Jan
+Added the volume 
+need to check it worked or not
+created new new file mysql-pvc.yaml created the volume and then modified the db deployment file to add new volume and redeployed the pod 
+
+learn the  how to use secret in k8s
+created the secret file and create my_var value in the key we can create multiple key value as per ur need 
+used that in the app1 deployment file.
+
+Learn how to use 
+Resource in k8s 
+3 type
+1. without anything  => besteffort
+2. with only request => burstable
+3. with request,limits => guaranteed
+
+used the type 3 in the app1 deployment 
+
+
+
+
+
+

@@ -17,6 +17,21 @@ spec:
         - name: app-php
           imagePullPolicy: IfNotPresent
           image: php-app:latest
+          resources:
+            requests:
+              memory: 200Mi
+              cpu: 100m
+            limits:
+              memory: 200Mi
+              cpu: 100m
+
+          env:
+            - name: MYVARIABLE
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: my_var
+
 
 ---
 

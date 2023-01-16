@@ -181,3 +181,16 @@ kubectl port-forward php-app-adminer 8080:8080
   55 kubectl delete ingress myingress
   56 kubectl apply -f .\ingress-srv.yaml
   57 kubectl describe ingress
+
+  16-Jan
+  kubectl get ingress
+  kubectl get pods -n ingress-nginx
+  kubectl get deploy -n ingress-nginx
+
+  kubectl get pv
+  kubectl get pvc
+
+first delete pvc and then pv
+
+kubectl delete  pvc <PVC Name>
+kubectl delete  pv <PV Name>

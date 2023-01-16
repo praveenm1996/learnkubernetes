@@ -17,6 +17,13 @@ spec:
         - name: db
           image: php-db:latest
           imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: mysql-storage
+              mountPath: /mysql/data
+      volumes:
+        - name: mysql-storage
+          persistentVolumeClaim:
+            claimName: mysql-pvc
 
 
 ---
